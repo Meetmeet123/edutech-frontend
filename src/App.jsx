@@ -35,6 +35,7 @@ import MobileApp from "./components/MobileApp/MobileApp";
 import StudentGuardianPanel from "./components/StudentGuardianPanel/StudentGuardianPanel.jsx";
 import SessionList from "./components/Sessions/Sessions.jsx";
 import SMSSetting from "./components/SMSSetting/SMSSetting.jsx";
+import EmailSetting from "./components/EmailSetting/EmailSetting.jsx";
 import GetAllUsers from "./components/user/GetAllUser";
 
 import UserAttendance from "./components/attendance/UserAttendance";
@@ -262,13 +263,17 @@ function App() {
               exact
               element={<SessionList />}
             />
-
+          
             <Route
               path="/admin/sms-setting"
               exact
               element={<SMSSetting />}
             />
-
+            <Route
+              path="/admin/email-setting"
+              exact   
+              element={<EmailSetting />}
+            />
             {/* === === === Payroll Routes === === === */}
             <Route
               element={<UserPrivateRoute permission={"readAll-payroll"} />}
